@@ -125,6 +125,8 @@ public class DescribeVpnGatewaysResponse extends AcsResponse {
 
 		private String resourceGroupId;
 
+		private String gatewayType;
+
 		private List<Tag> tags;
 
 		private List<String> eniInstanceIds;
@@ -321,6 +323,14 @@ public class DescribeVpnGatewaysResponse extends AcsResponse {
 
 		public void setResourceGroupId(String resourceGroupId) {
 			this.resourceGroupId = resourceGroupId;
+		}
+
+		public String getGatewayType() {
+			return this.gatewayType;
+		}
+
+		public void setGatewayType(String gatewayType) {
+			this.gatewayType = gatewayType;
 		}
 
 		public List<Tag> getTags() {

@@ -93,6 +93,8 @@ public class DescribeVpnAttachmentsResponse extends AcsResponse {
 
 		private String tag;
 
+		private String tunnelBandwidth;
+
 		private List<Tag> tags;
 
 		public String getInstanceId() {
@@ -157,6 +159,14 @@ public class DescribeVpnAttachmentsResponse extends AcsResponse {
 
 		public void setTag(String tag) {
 			this.tag = tag;
+		}
+
+		public String getTunnelBandwidth() {
+			return this.tunnelBandwidth;
+		}
+
+		public void setTunnelBandwidth(String tunnelBandwidth) {
+			this.tunnelBandwidth = tunnelBandwidth;
 		}
 
 		public List<Tag> getTags() {

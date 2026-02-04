@@ -59,6 +59,7 @@ public class DescribeVpnConnectionResponseUnmarshaller {
 		describeVpnConnectionResponse.setCrossAccountAuthorized(_ctx.booleanValue("DescribeVpnConnectionResponse.CrossAccountAuthorized"));
 		describeVpnConnectionResponse.setEnableTunnelsBgp(_ctx.booleanValue("DescribeVpnConnectionResponse.EnableTunnelsBgp"));
 		describeVpnConnectionResponse.setResourceGroupId(_ctx.stringValue("DescribeVpnConnectionResponse.ResourceGroupId"));
+		describeVpnConnectionResponse.setTunnelBandwidth(_ctx.stringValue("DescribeVpnConnectionResponse.TunnelBandwidth"));
 
 		IkeConfig ikeConfig = new IkeConfig();
 		ikeConfig.setRemoteId(_ctx.stringValue("DescribeVpnConnectionResponse.IkeConfig.RemoteId"));

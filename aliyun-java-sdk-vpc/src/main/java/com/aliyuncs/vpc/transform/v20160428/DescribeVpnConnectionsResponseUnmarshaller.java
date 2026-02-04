@@ -66,6 +66,7 @@ public class DescribeVpnConnectionsResponseUnmarshaller {
 			vpnConnection.setInternetIp(_ctx.stringValue("DescribeVpnConnectionsResponse.VpnConnections["+ i +"].InternetIp"));
 			vpnConnection.setEnableTunnelsBgp(_ctx.booleanValue("DescribeVpnConnectionsResponse.VpnConnections["+ i +"].EnableTunnelsBgp"));
 			vpnConnection.setResourceGroupId(_ctx.stringValue("DescribeVpnConnectionsResponse.VpnConnections["+ i +"].ResourceGroupId"));
+			vpnConnection.setTunnelBandwidth(_ctx.stringValue("DescribeVpnConnectionsResponse.VpnConnections["+ i +"].TunnelBandwidth"));
 
 			IkeConfig ikeConfig = new IkeConfig();
 			ikeConfig.setRemoteId(_ctx.stringValue("DescribeVpnConnectionsResponse.VpnConnections["+ i +"].IkeConfig.RemoteId"));

@@ -50,6 +50,8 @@ public class CreateVpnAttachmentRequest extends RpcAcsRequest<CreateVpnAttachmen
 
 	private Boolean enableNatTraversal;
 
+	private String tunnelBandwidth;
+
 	private String ikeConfig;
 
 	private Boolean autoConfigRoute;
@@ -212,6 +214,17 @@ public class CreateVpnAttachmentRequest extends RpcAcsRequest<CreateVpnAttachmen
 		this.enableNatTraversal = enableNatTraversal;
 		if(enableNatTraversal != null){
 			putQueryParameter("EnableNatTraversal", enableNatTraversal.toString());
+		}
+	}
+
+	public String getTunnelBandwidth() {
+		return this.tunnelBandwidth;
+	}
+
+	public void setTunnelBandwidth(String tunnelBandwidth) {
+		this.tunnelBandwidth = tunnelBandwidth;
+		if(tunnelBandwidth != null){
+			putQueryParameter("TunnelBandwidth", tunnelBandwidth);
 		}
 	}
 

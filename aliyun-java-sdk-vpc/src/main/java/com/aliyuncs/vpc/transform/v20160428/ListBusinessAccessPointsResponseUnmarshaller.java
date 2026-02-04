@@ -19,6 +19,7 @@ import java.util.List;
 
 import com.aliyuncs.vpc.model.v20160428.ListBusinessAccessPointsResponse;
 import com.aliyuncs.vpc.model.v20160428.ListBusinessAccessPointsResponse.BusinessAccessPointsItem;
+import com.aliyuncs.vpc.model.v20160428.ListBusinessAccessPointsResponse.BusinessAccessPointsItem.OpticalModuleModelsItem;
 import com.aliyuncs.transform.UnmarshallerContext;
 
 
@@ -38,6 +39,16 @@ public class ListBusinessAccessPointsResponseUnmarshaller {
 			businessAccessPointsItem.setCloudBoxInstanceIds(_ctx.stringValue("ListBusinessAccessPointsResponse.BusinessAccessPoints["+ i +"].CloudBoxInstanceIds"));
 			businessAccessPointsItem.setLongitude(_ctx.doubleValue("ListBusinessAccessPointsResponse.BusinessAccessPoints["+ i +"].Longitude"));
 			businessAccessPointsItem.setLatitude(_ctx.doubleValue("ListBusinessAccessPointsResponse.BusinessAccessPoints["+ i +"].Latitude"));
+
+			List<OpticalModuleModelsItem> opticalModuleModels = new ArrayList<OpticalModuleModelsItem>();
+			for (int j = 0; j < _ctx.lengthValue("ListBusinessAccessPointsResponse.BusinessAccessPoints["+ i +"].OpticalModuleModels.Length"); j++) {
+				OpticalModuleModelsItem opticalModuleModelsItem = new OpticalModuleModelsItem();
+				opticalModuleModelsItem.setPortType(_ctx.stringValue("ListBusinessAccessPointsResponse.BusinessAccessPoints["+ i +"].OpticalModuleModels["+ j +"].PortType"));
+				opticalModuleModelsItem.setOpticalModuleModel(_ctx.stringValue("ListBusinessAccessPointsResponse.BusinessAccessPoints["+ i +"].OpticalModuleModels["+ j +"].OpticalModuleModel"));
+
+				opticalModuleModels.add(opticalModuleModelsItem);
+			}
+			businessAccessPointsItem.setOpticalModuleModels(opticalModuleModels);
 
 			businessAccessPoints.add(businessAccessPointsItem);
 		}

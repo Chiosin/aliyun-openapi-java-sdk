@@ -75,6 +75,7 @@ public class DescribeVirtualBorderRoutersResponseUnmarshaller {
 			virtualBorderRouterType.setSitelinkEnable(_ctx.booleanValue("DescribeVirtualBorderRoutersResponse.VirtualBorderRouterSet["+ i +"].SitelinkEnable"));
 			virtualBorderRouterType.setEcrAttatchStatus(_ctx.stringValue("DescribeVirtualBorderRoutersResponse.VirtualBorderRouterSet["+ i +"].EcrAttatchStatus"));
 			virtualBorderRouterType.setEcrOwnerId(_ctx.stringValue("DescribeVirtualBorderRoutersResponse.VirtualBorderRouterSet["+ i +"].EcrOwnerId"));
+			virtualBorderRouterType.setMtu(_ctx.integerValue("DescribeVirtualBorderRoutersResponse.VirtualBorderRouterSet["+ i +"].Mtu"));
 
 			List<AssociatedPhysicalConnection> associatedPhysicalConnections = new ArrayList<AssociatedPhysicalConnection>();
 			for (int j = 0; j < _ctx.lengthValue("DescribeVirtualBorderRoutersResponse.VirtualBorderRouterSet["+ i +"].AssociatedPhysicalConnections.Length"); j++) {

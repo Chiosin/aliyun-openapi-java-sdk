@@ -15,26 +15,16 @@
 package com.aliyuncs.vpc.model.v20160428;
 
 import com.aliyuncs.AcsResponse;
-import com.aliyuncs.vpc.transform.v20160428.ConvertBandwidthPackageResponseUnmarshaller;
+import com.aliyuncs.vpc.transform.v20160428.DeleteRouteTargetGroupResponseUnmarshaller;
 import com.aliyuncs.transform.UnmarshallerContext;
 
 /**
  * @author auto create
  * @version 
  */
-public class ConvertBandwidthPackageResponse extends AcsResponse {
-
-	private String convertInstanceId;
+public class DeleteRouteTargetGroupResponse extends AcsResponse {
 
 	private String requestId;
-
-	public String getConvertInstanceId() {
-		return this.convertInstanceId;
-	}
-
-	public void setConvertInstanceId(String convertInstanceId) {
-		this.convertInstanceId = convertInstanceId;
-	}
 
 	public String getRequestId() {
 		return this.requestId;
@@ -45,7 +35,12 @@ public class ConvertBandwidthPackageResponse extends AcsResponse {
 	}
 
 	@Override
-	public ConvertBandwidthPackageResponse getInstance(UnmarshallerContext context) {
-		return	ConvertBandwidthPackageResponseUnmarshaller.unmarshall(this, context);
+	public DeleteRouteTargetGroupResponse getInstance(UnmarshallerContext context) {
+		return	DeleteRouteTargetGroupResponseUnmarshaller.unmarshall(this, context);
+	}
+
+	@Override
+	public boolean checkShowJsonItemName() {
+		return false;
 	}
 }

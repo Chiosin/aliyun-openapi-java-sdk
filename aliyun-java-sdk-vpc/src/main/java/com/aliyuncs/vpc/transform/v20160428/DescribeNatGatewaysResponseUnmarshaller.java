@@ -21,6 +21,7 @@ import com.aliyuncs.vpc.model.v20160428.DescribeNatGatewaysResponse;
 import com.aliyuncs.vpc.model.v20160428.DescribeNatGatewaysResponse.NatGateway;
 import com.aliyuncs.vpc.model.v20160428.DescribeNatGatewaysResponse.NatGateway.AccessMode;
 import com.aliyuncs.vpc.model.v20160428.DescribeNatGatewaysResponse.NatGateway.IpList;
+import com.aliyuncs.vpc.model.v20160428.DescribeNatGatewaysResponse.NatGateway.IpPrefixListItem;
 import com.aliyuncs.vpc.model.v20160428.DescribeNatGatewaysResponse.NatGateway.NatGatewayPrivateInfo;
 import com.aliyuncs.vpc.model.v20160428.DescribeNatGatewaysResponse.NatGateway.Tag;
 import com.aliyuncs.transform.UnmarshallerContext;
@@ -126,6 +127,15 @@ public class DescribeNatGatewaysResponseUnmarshaller {
 				tags.add(tag);
 			}
 			natGateway.setTags(tags);
+
+			List<IpPrefixListItem> ipPrefixList = new ArrayList<IpPrefixListItem>();
+			for (int j = 0; j < _ctx.lengthValue("DescribeNatGatewaysResponse.NatGateways["+ i +"].IpPrefixList.Length"); j++) {
+				IpPrefixListItem ipPrefixListItem = new IpPrefixListItem();
+				ipPrefixListItem.setIpPrefix(_ctx.stringValue("DescribeNatGatewaysResponse.NatGateways["+ i +"].IpPrefixList["+ j +"].IpPrefix"));
+
+				ipPrefixList.add(ipPrefixListItem);
+			}
+			natGateway.setIpPrefixList(ipPrefixList);
 
 			natGateways.add(natGateway);
 		}

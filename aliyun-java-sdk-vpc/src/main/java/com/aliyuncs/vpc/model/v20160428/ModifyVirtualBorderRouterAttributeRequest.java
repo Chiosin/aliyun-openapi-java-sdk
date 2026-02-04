@@ -65,6 +65,8 @@ public class ModifyVirtualBorderRouterAttributeRequest extends RpcAcsRequest<Mod
 
 	private Long minRxInterval;
 
+	private Integer mtu;
+
 	private Boolean sitelinkEnable;
 
 	private String localIpv6GatewayIp;
@@ -296,6 +298,17 @@ public class ModifyVirtualBorderRouterAttributeRequest extends RpcAcsRequest<Mod
 		this.minRxInterval = minRxInterval;
 		if(minRxInterval != null){
 			putQueryParameter("MinRxInterval", minRxInterval.toString());
+		}
+	}
+
+	public Integer getMtu() {
+		return this.mtu;
+	}
+
+	public void setMtu(Integer mtu) {
+		this.mtu = mtu;
+		if(mtu != null){
+			putQueryParameter("Mtu", mtu.toString());
 		}
 	}
 

@@ -42,6 +42,7 @@ public class DescribePhysicalConnectionLOAResponseUnmarshaller {
 		physicalConnectionLOAType.setCompanyName(_ctx.stringValue("DescribePhysicalConnectionLOAResponse.PhysicalConnectionLOAType.CompanyName"));
 		physicalConnectionLOAType.setLineServiceProvider(_ctx.stringValue("DescribePhysicalConnectionLOAResponse.PhysicalConnectionLOAType.LineServiceProvider"));
 		physicalConnectionLOAType.setLineSPContactInfo(_ctx.stringValue("DescribePhysicalConnectionLOAResponse.PhysicalConnectionLOAType.LineSPContactInfo"));
+		physicalConnectionLOAType.setDescription(_ctx.stringValue("DescribePhysicalConnectionLOAResponse.PhysicalConnectionLOAType.Description"));
 
 		List<PMInfoItem> pMInfo = new ArrayList<PMInfoItem>();
 		for (int i = 0; i < _ctx.lengthValue("DescribePhysicalConnectionLOAResponse.PhysicalConnectionLOAType.PMInfo.Length"); i++) {

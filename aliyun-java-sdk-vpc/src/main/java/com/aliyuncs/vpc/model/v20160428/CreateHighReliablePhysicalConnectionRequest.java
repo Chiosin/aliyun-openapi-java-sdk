@@ -191,6 +191,7 @@ public class CreateHighReliablePhysicalConnectionRequest extends RpcAcsRequest<C
 				putQueryParameter("ApList." + (depth1 + 1) + ".Bandwidth" , apLists.get(depth1).getBandwidth());
 				putQueryParameter("ApList." + (depth1 + 1) + ".PeerLocation" , apLists.get(depth1).getPeerLocation());
 				putQueryParameter("ApList." + (depth1 + 1) + ".CircuitCode" , apLists.get(depth1).getCircuitCode());
+				putQueryParameter("ApList." + (depth1 + 1) + ".OpticalModuleModel" , apLists.get(depth1).getOpticalModuleModel());
 			}
 		}	
 	}
@@ -263,6 +264,8 @@ public class CreateHighReliablePhysicalConnectionRequest extends RpcAcsRequest<C
 		private String peerLocation;
 
 		private String circuitCode;
+
+		private String opticalModuleModel;
 
 		public String getName() {
 			return this.name;
@@ -342,6 +345,14 @@ public class CreateHighReliablePhysicalConnectionRequest extends RpcAcsRequest<C
 
 		public void setCircuitCode(String circuitCode) {
 			this.circuitCode = circuitCode;
+		}
+
+		public String getOpticalModuleModel() {
+			return this.opticalModuleModel;
+		}
+
+		public void setOpticalModuleModel(String opticalModuleModel) {
+			this.opticalModuleModel = opticalModuleModel;
 		}
 	}
 

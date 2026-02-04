@@ -42,6 +42,8 @@ public class CreatePhysicalConnectionRequest extends RpcAcsRequest<CreatePhysica
 
 	private String resourceGroupId;
 
+	private String opticalModuleModel;
+
 	private List<Tag> tags;
 
 	private String redundantPhysicalConnectionId;
@@ -155,6 +157,17 @@ public class CreatePhysicalConnectionRequest extends RpcAcsRequest<CreatePhysica
 		this.resourceGroupId = resourceGroupId;
 		if(resourceGroupId != null){
 			putQueryParameter("ResourceGroupId", resourceGroupId);
+		}
+	}
+
+	public String getOpticalModuleModel() {
+		return this.opticalModuleModel;
+	}
+
+	public void setOpticalModuleModel(String opticalModuleModel) {
+		this.opticalModuleModel = opticalModuleModel;
+		if(opticalModuleModel != null){
+			putQueryParameter("OpticalModuleModel", opticalModuleModel);
 		}
 	}
 

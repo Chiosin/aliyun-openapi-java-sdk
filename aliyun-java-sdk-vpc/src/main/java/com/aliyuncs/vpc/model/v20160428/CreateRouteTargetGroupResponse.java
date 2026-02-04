@@ -15,16 +15,18 @@
 package com.aliyuncs.vpc.model.v20160428;
 
 import com.aliyuncs.AcsResponse;
-import com.aliyuncs.vpc.transform.v20160428.DisableNatGatewayEcsMetricResponseUnmarshaller;
+import com.aliyuncs.vpc.transform.v20160428.CreateRouteTargetGroupResponseUnmarshaller;
 import com.aliyuncs.transform.UnmarshallerContext;
 
 /**
  * @author auto create
  * @version 
  */
-public class DisableNatGatewayEcsMetricResponse extends AcsResponse {
+public class CreateRouteTargetGroupResponse extends AcsResponse {
 
 	private String requestId;
+
+	private String routeTargetGroupId;
 
 	public String getRequestId() {
 		return this.requestId;
@@ -34,9 +36,17 @@ public class DisableNatGatewayEcsMetricResponse extends AcsResponse {
 		this.requestId = requestId;
 	}
 
+	public String getRouteTargetGroupId() {
+		return this.routeTargetGroupId;
+	}
+
+	public void setRouteTargetGroupId(String routeTargetGroupId) {
+		this.routeTargetGroupId = routeTargetGroupId;
+	}
+
 	@Override
-	public DisableNatGatewayEcsMetricResponse getInstance(UnmarshallerContext context) {
-		return	DisableNatGatewayEcsMetricResponseUnmarshaller.unmarshall(this, context);
+	public CreateRouteTargetGroupResponse getInstance(UnmarshallerContext context) {
+		return	CreateRouteTargetGroupResponseUnmarshaller.unmarshall(this, context);
 	}
 
 	@Override

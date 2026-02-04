@@ -40,6 +40,8 @@ public class CreateVpcRequest extends RpcAcsRequest<CreateVpcResponse> {
 
 	private String resourceGroupId;
 
+	private Integer ipv6CidrMask;
+
 	private String ipv4IpamPoolId;
 
 	private String ipv6Isp;
@@ -59,6 +61,8 @@ public class CreateVpcRequest extends RpcAcsRequest<CreateVpcResponse> {
 	private Long ownerId;
 
 	private String ipv6CidrBlock;
+
+	private String ipv6IpamPoolId;
 
 	private String cidrBlock;
 	public CreateVpcRequest() {
@@ -144,6 +148,17 @@ public class CreateVpcRequest extends RpcAcsRequest<CreateVpcResponse> {
 		this.resourceGroupId = resourceGroupId;
 		if(resourceGroupId != null){
 			putQueryParameter("ResourceGroupId", resourceGroupId);
+		}
+	}
+
+	public Integer getIpv6CidrMask() {
+		return this.ipv6CidrMask;
+	}
+
+	public void setIpv6CidrMask(Integer ipv6CidrMask) {
+		this.ipv6CidrMask = ipv6CidrMask;
+		if(ipv6CidrMask != null){
+			putQueryParameter("Ipv6CidrMask", ipv6CidrMask.toString());
 		}
 	}
 
@@ -257,6 +272,17 @@ public class CreateVpcRequest extends RpcAcsRequest<CreateVpcResponse> {
 		this.ipv6CidrBlock = ipv6CidrBlock;
 		if(ipv6CidrBlock != null){
 			putQueryParameter("Ipv6CidrBlock", ipv6CidrBlock);
+		}
+	}
+
+	public String getIpv6IpamPoolId() {
+		return this.ipv6IpamPoolId;
+	}
+
+	public void setIpv6IpamPoolId(String ipv6IpamPoolId) {
+		this.ipv6IpamPoolId = ipv6IpamPoolId;
+		if(ipv6IpamPoolId != null){
+			putQueryParameter("Ipv6IpamPoolId", ipv6IpamPoolId);
 		}
 	}
 

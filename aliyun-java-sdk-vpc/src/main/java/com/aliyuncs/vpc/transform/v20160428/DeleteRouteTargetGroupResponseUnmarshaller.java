@@ -14,17 +14,16 @@
 
 package com.aliyuncs.vpc.transform.v20160428;
 
-import com.aliyuncs.vpc.model.v20160428.ConvertBandwidthPackageResponse;
+import com.aliyuncs.vpc.model.v20160428.DeleteRouteTargetGroupResponse;
 import com.aliyuncs.transform.UnmarshallerContext;
 
 
-public class ConvertBandwidthPackageResponseUnmarshaller {
+public class DeleteRouteTargetGroupResponseUnmarshaller {
 
-	public static ConvertBandwidthPackageResponse unmarshall(ConvertBandwidthPackageResponse convertBandwidthPackageResponse, UnmarshallerContext _ctx) {
+	public static DeleteRouteTargetGroupResponse unmarshall(DeleteRouteTargetGroupResponse deleteRouteTargetGroupResponse, UnmarshallerContext _ctx) {
 		
-		convertBandwidthPackageResponse.setRequestId(_ctx.stringValue("ConvertBandwidthPackageResponse.RequestId"));
-		convertBandwidthPackageResponse.setConvertInstanceId(_ctx.stringValue("ConvertBandwidthPackageResponse.ConvertInstanceId"));
+		deleteRouteTargetGroupResponse.setRequestId(_ctx.stringValue("DeleteRouteTargetGroupResponse.RequestId"));
 	 
-	 	return convertBandwidthPackageResponse;
+	 	return deleteRouteTargetGroupResponse;
 	}
 }

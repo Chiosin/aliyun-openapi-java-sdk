@@ -153,6 +153,8 @@ public class DescribeVirtualBorderRoutersResponse extends AcsResponse {
 
 		private String ecrOwnerId;
 
+		private Integer mtu;
+
 		private List<AssociatedPhysicalConnection> associatedPhysicalConnections;
 
 		private List<AssociatedCen> associatedCens;
@@ -461,6 +463,14 @@ public class DescribeVirtualBorderRoutersResponse extends AcsResponse {
 
 		public void setEcrOwnerId(String ecrOwnerId) {
 			this.ecrOwnerId = ecrOwnerId;
+		}
+
+		public Integer getMtu() {
+			return this.mtu;
+		}
+
+		public void setMtu(Integer mtu) {
+			this.mtu = mtu;
 		}
 
 		public List<AssociatedPhysicalConnection> getAssociatedPhysicalConnections() {

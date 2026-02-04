@@ -49,6 +49,8 @@ public class ListFullNatEntriesResponseUnmarshaller {
 			fullNatEntry.setFullNatEntryId(_ctx.stringValue("ListFullNatEntriesResponse.FullNatEntries["+ i +"].FullNatEntryId"));
 			fullNatEntry.setFullNatEntryStatus(_ctx.stringValue("ListFullNatEntriesResponse.FullNatEntries["+ i +"].FullNatEntryStatus"));
 			fullNatEntry.setFullNatTableId(_ctx.stringValue("ListFullNatEntriesResponse.FullNatEntries["+ i +"].FullNatTableId"));
+			fullNatEntry.setAccessDomain(_ctx.stringValue("ListFullNatEntriesResponse.FullNatEntries["+ i +"].AccessDomain"));
+			fullNatEntry.setDomainResolve(_ctx.stringValue("ListFullNatEntriesResponse.FullNatEntries["+ i +"].DomainResolve"));
 
 			fullNatEntries.add(fullNatEntry);
 		}

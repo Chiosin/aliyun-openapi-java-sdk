@@ -42,6 +42,7 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseUnmarshaller {
 			associateNetworkInterface.setResourceType(_ctx.stringValue("DescribeNatGatewayAssociateNetworkInterfacesResponse.AssociateNetworkInterfaces["+ i +"].ResourceType"));
 			associateNetworkInterface.setResourceOwnerId(_ctx.stringValue("DescribeNatGatewayAssociateNetworkInterfacesResponse.AssociateNetworkInterfaces["+ i +"].ResourceOwnerId"));
 			associateNetworkInterface.setTunnelIndex(_ctx.stringValue("DescribeNatGatewayAssociateNetworkInterfacesResponse.AssociateNetworkInterfaces["+ i +"].TunnelIndex"));
+			associateNetworkInterface.setResourceVpcId(_ctx.stringValue("DescribeNatGatewayAssociateNetworkInterfacesResponse.AssociateNetworkInterfaces["+ i +"].ResourceVpcId"));
 
 			List<IPv4Set> iPv4Sets = new ArrayList<IPv4Set>();
 			for (int j = 0; j < _ctx.lengthValue("DescribeNatGatewayAssociateNetworkInterfacesResponse.AssociateNetworkInterfaces["+ i +"].IPv4Sets.Length"); j++) {

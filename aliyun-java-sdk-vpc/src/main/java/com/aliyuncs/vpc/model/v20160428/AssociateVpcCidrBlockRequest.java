@@ -29,6 +29,8 @@ public class AssociateVpcCidrBlockRequest extends RpcAcsRequest<AssociateVpcCidr
 
 	private String ipamPoolId;
 
+	private Integer ipv6CidrMask;
+
 	private String ipv6Isp;
 
 	private String ipVersion;
@@ -74,6 +76,17 @@ public class AssociateVpcCidrBlockRequest extends RpcAcsRequest<AssociateVpcCidr
 		this.ipamPoolId = ipamPoolId;
 		if(ipamPoolId != null){
 			putQueryParameter("IpamPoolId", ipamPoolId);
+		}
+	}
+
+	public Integer getIpv6CidrMask() {
+		return this.ipv6CidrMask;
+	}
+
+	public void setIpv6CidrMask(Integer ipv6CidrMask) {
+		this.ipv6CidrMask = ipv6CidrMask;
+		if(ipv6CidrMask != null){
+			putQueryParameter("Ipv6CidrMask", ipv6CidrMask.toString());
 		}
 	}
 

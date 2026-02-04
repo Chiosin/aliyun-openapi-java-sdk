@@ -123,6 +123,10 @@ public class ListFullNatEntriesResponse extends AcsResponse {
 
 		private String fullNatTableId;
 
+		private String accessDomain;
+
+		private String domainResolve;
+
 		public String getNatIp() {
 			return this.natIp;
 		}
@@ -225,6 +229,22 @@ public class ListFullNatEntriesResponse extends AcsResponse {
 
 		public void setFullNatTableId(String fullNatTableId) {
 			this.fullNatTableId = fullNatTableId;
+		}
+
+		public String getAccessDomain() {
+			return this.accessDomain;
+		}
+
+		public void setAccessDomain(String accessDomain) {
+			this.accessDomain = accessDomain;
+		}
+
+		public String getDomainResolve() {
+			return this.domainResolve;
+		}
+
+		public void setDomainResolve(String domainResolve) {
+			this.domainResolve = domainResolve;
 		}
 	}
 

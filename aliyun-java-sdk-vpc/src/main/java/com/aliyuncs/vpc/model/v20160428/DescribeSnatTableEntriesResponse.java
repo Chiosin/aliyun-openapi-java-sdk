@@ -93,9 +93,9 @@ public class DescribeSnatTableEntriesResponse extends AcsResponse {
 
 		private String natGatewayId;
 
-		private String eipAffinity;
-
 		private String networkInterfaceId;
+
+		private String eipAffinity;
 
 		public String getStatus() {
 			return this.status;
@@ -161,20 +161,20 @@ public class DescribeSnatTableEntriesResponse extends AcsResponse {
 			this.natGatewayId = natGatewayId;
 		}
 
-		public String getEipAffinity() {
-			return this.eipAffinity;
-		}
-
-		public void setEipAffinity(String eipAffinity) {
-			this.eipAffinity = eipAffinity;
-		}
-
 		public String getNetworkInterfaceId() {
 			return this.networkInterfaceId;
 		}
 
 		public void setNetworkInterfaceId(String networkInterfaceId) {
 			this.networkInterfaceId = networkInterfaceId;
+		}
+
+		public String getEipAffinity() {
+			return this.eipAffinity;
+		}
+
+		public void setEipAffinity(String eipAffinity) {
+			this.eipAffinity = eipAffinity;
 		}
 	}
 

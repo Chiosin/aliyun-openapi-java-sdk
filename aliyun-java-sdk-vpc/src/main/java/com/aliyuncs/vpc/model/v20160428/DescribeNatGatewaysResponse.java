@@ -129,6 +129,8 @@ public class DescribeNatGatewaysResponse extends AcsResponse {
 
 		private List<Tag> tags;
 
+		private List<IpPrefixListItem> ipPrefixList;
+
 		private List<String> forwardTableIds;
 
 		private List<String> snatTableIds;
@@ -349,6 +351,14 @@ public class DescribeNatGatewaysResponse extends AcsResponse {
 			this.tags = tags;
 		}
 
+		public List<IpPrefixListItem> getIpPrefixList() {
+			return this.ipPrefixList;
+		}
+
+		public void setIpPrefixList(List<IpPrefixListItem> ipPrefixList) {
+			this.ipPrefixList = ipPrefixList;
+		}
+
 		public List<String> getForwardTableIds() {
 			return this.forwardTableIds;
 		}
@@ -480,6 +490,19 @@ public class DescribeNatGatewaysResponse extends AcsResponse {
 
 			public void setTagValue(String tagValue) {
 				this.tagValue = tagValue;
+			}
+		}
+
+		public static class IpPrefixListItem {
+
+			private String ipPrefix;
+
+			public String getIpPrefix() {
+				return this.ipPrefix;
+			}
+
+			public void setIpPrefix(String ipPrefix) {
+				this.ipPrefix = ipPrefix;
 			}
 		}
 

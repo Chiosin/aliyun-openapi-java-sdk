@@ -75,6 +75,8 @@ public class DescribeVpnConnectionResponse extends AcsResponse {
 
 	private String resourceGroupId;
 
+	private String tunnelBandwidth;
+
 	private List<Tag> tags;
 
 	private List<TunnelOptions> tunnelOptionsSpecification;
@@ -285,6 +287,14 @@ public class DescribeVpnConnectionResponse extends AcsResponse {
 
 	public void setResourceGroupId(String resourceGroupId) {
 		this.resourceGroupId = resourceGroupId;
+	}
+
+	public String getTunnelBandwidth() {
+		return this.tunnelBandwidth;
+	}
+
+	public void setTunnelBandwidth(String tunnelBandwidth) {
+		this.tunnelBandwidth = tunnelBandwidth;
 	}
 
 	public List<Tag> getTags() {

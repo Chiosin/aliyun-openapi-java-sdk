@@ -14,16 +14,17 @@
 
 package com.aliyuncs.vpc.transform.v20160428;
 
-import com.aliyuncs.vpc.model.v20160428.EnableNatGatewayEcsMetricResponse;
+import com.aliyuncs.vpc.model.v20160428.CreateRouteTargetGroupResponse;
 import com.aliyuncs.transform.UnmarshallerContext;
 
 
-public class EnableNatGatewayEcsMetricResponseUnmarshaller {
+public class CreateRouteTargetGroupResponseUnmarshaller {
 
-	public static EnableNatGatewayEcsMetricResponse unmarshall(EnableNatGatewayEcsMetricResponse enableNatGatewayEcsMetricResponse, UnmarshallerContext _ctx) {
+	public static CreateRouteTargetGroupResponse unmarshall(CreateRouteTargetGroupResponse createRouteTargetGroupResponse, UnmarshallerContext _ctx) {
 		
-		enableNatGatewayEcsMetricResponse.setRequestId(_ctx.stringValue("EnableNatGatewayEcsMetricResponse.RequestId"));
+		createRouteTargetGroupResponse.setRequestId(_ctx.stringValue("CreateRouteTargetGroupResponse.RequestId"));
+		createRouteTargetGroupResponse.setRouteTargetGroupId(_ctx.stringValue("CreateRouteTargetGroupResponse.RouteTargetGroupId"));
 	 
-	 	return enableNatGatewayEcsMetricResponse;
+	 	return createRouteTargetGroupResponse;
 	}
 }

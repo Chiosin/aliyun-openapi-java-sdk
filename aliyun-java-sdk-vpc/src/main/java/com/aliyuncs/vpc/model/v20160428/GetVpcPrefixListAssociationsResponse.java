@@ -93,6 +93,8 @@ public class GetVpcPrefixListAssociationsResponse extends AcsResponse {
 
 		private String resourceUid;
 
+		private String cidrList;
+
 		public String getPrefixListId() {
 			return this.prefixListId;
 		}
@@ -155,6 +157,14 @@ public class GetVpcPrefixListAssociationsResponse extends AcsResponse {
 
 		public void setResourceUid(String resourceUid) {
 			this.resourceUid = resourceUid;
+		}
+
+		public String getCidrList() {
+			return this.cidrList;
+		}
+
+		public void setCidrList(String cidrList) {
+			this.cidrList = cidrList;
 		}
 	}
 

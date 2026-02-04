@@ -72,6 +72,7 @@ public class DescribePhysicalConnectionsResponseUnmarshaller {
 			physicalConnectionType.setResourceGroupId(_ctx.stringValue("DescribePhysicalConnectionsResponse.PhysicalConnectionSet["+ i +"].ResourceGroupId"));
 			physicalConnectionType.setAdDetailLocation(_ctx.stringValue("DescribePhysicalConnectionsResponse.PhysicalConnectionSet["+ i +"].AdDetailLocation"));
 			physicalConnectionType.setQosId(_ctx.stringValue("DescribePhysicalConnectionsResponse.PhysicalConnectionSet["+ i +"].QosId"));
+			physicalConnectionType.setOpticalModuleModel(_ctx.stringValue("DescribePhysicalConnectionsResponse.PhysicalConnectionSet["+ i +"].OpticalModuleModel"));
 
 			List<TagsItem> tags = new ArrayList<TagsItem>();
 			for (int j = 0; j < _ctx.lengthValue("DescribePhysicalConnectionsResponse.PhysicalConnectionSet["+ i +"].Tags.Length"); j++) {

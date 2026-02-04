@@ -71,6 +71,8 @@ public class DescribePhysicalConnectionLOAResponse extends AcsResponse {
 
 		private String lineSPContactInfo;
 
+		private String description;
+
 		private List<PMInfoItem> pMInfo;
 
 		public String getStatus() {
@@ -167,6 +169,14 @@ public class DescribePhysicalConnectionLOAResponse extends AcsResponse {
 
 		public void setLineSPContactInfo(String lineSPContactInfo) {
 			this.lineSPContactInfo = lineSPContactInfo;
+		}
+
+		public String getDescription() {
+			return this.description;
+		}
+
+		public void setDescription(String description) {
+			this.description = description;
 		}
 
 		public List<PMInfoItem> getPMInfo() {

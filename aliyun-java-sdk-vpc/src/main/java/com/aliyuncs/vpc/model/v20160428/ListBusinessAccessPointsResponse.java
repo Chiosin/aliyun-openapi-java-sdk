@@ -61,6 +61,8 @@ public class ListBusinessAccessPointsResponse extends AcsResponse {
 
 		private Double latitude;
 
+		private List<OpticalModuleModelsItem> opticalModuleModels;
+
 		public String getAccessPointId() {
 			return this.accessPointId;
 		}
@@ -115,6 +117,37 @@ public class ListBusinessAccessPointsResponse extends AcsResponse {
 
 		public void setLatitude(Double latitude) {
 			this.latitude = latitude;
+		}
+
+		public List<OpticalModuleModelsItem> getOpticalModuleModels() {
+			return this.opticalModuleModels;
+		}
+
+		public void setOpticalModuleModels(List<OpticalModuleModelsItem> opticalModuleModels) {
+			this.opticalModuleModels = opticalModuleModels;
+		}
+
+		public static class OpticalModuleModelsItem {
+
+			private String portType;
+
+			private String opticalModuleModel;
+
+			public String getPortType() {
+				return this.portType;
+			}
+
+			public void setPortType(String portType) {
+				this.portType = portType;
+			}
+
+			public String getOpticalModuleModel() {
+				return this.opticalModuleModel;
+			}
+
+			public void setOpticalModuleModel(String opticalModuleModel) {
+				this.opticalModuleModel = opticalModuleModel;
+			}
 		}
 	}
 

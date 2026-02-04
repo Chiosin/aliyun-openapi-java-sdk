@@ -40,6 +40,8 @@ public class DescribeVpnGatewaysRequest extends RpcAcsRequest<DescribeVpnGateway
 
 	private String businessStatus;
 
+	private String gatewayType;
+
 	private String resourceOwnerAccount;
 
 	private String ownerAccount;
@@ -137,6 +139,17 @@ public class DescribeVpnGatewaysRequest extends RpcAcsRequest<DescribeVpnGateway
 		this.businessStatus = businessStatus;
 		if(businessStatus != null){
 			putQueryParameter("BusinessStatus", businessStatus);
+		}
+	}
+
+	public String getGatewayType() {
+		return this.gatewayType;
+	}
+
+	public void setGatewayType(String gatewayType) {
+		this.gatewayType = gatewayType;
+		if(gatewayType != null){
+			putQueryParameter("GatewayType", gatewayType);
 		}
 	}
 

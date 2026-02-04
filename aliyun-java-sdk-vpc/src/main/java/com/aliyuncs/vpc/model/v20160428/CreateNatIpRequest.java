@@ -29,6 +29,8 @@ public class CreateNatIpRequest extends RpcAcsRequest<CreateNatIpResponse> {
 
 	private String natIpName;
 
+	private String ipv4Prefix;
+
 	private String clientToken;
 
 	private String natIpDescription;
@@ -44,6 +46,8 @@ public class CreateNatIpRequest extends RpcAcsRequest<CreateNatIpResponse> {
 	private Long ownerId;
 
 	private String natIpCidr;
+
+	private Integer ipv4PrefixCount;
 
 	private String natIp;
 	public CreateNatIpRequest() {
@@ -74,6 +78,17 @@ public class CreateNatIpRequest extends RpcAcsRequest<CreateNatIpResponse> {
 		this.natIpName = natIpName;
 		if(natIpName != null){
 			putQueryParameter("NatIpName", natIpName);
+		}
+	}
+
+	public String getIpv4Prefix() {
+		return this.ipv4Prefix;
+	}
+
+	public void setIpv4Prefix(String ipv4Prefix) {
+		this.ipv4Prefix = ipv4Prefix;
+		if(ipv4Prefix != null){
+			putQueryParameter("Ipv4Prefix", ipv4Prefix);
 		}
 	}
 
@@ -162,6 +177,17 @@ public class CreateNatIpRequest extends RpcAcsRequest<CreateNatIpResponse> {
 		this.natIpCidr = natIpCidr;
 		if(natIpCidr != null){
 			putQueryParameter("NatIpCidr", natIpCidr);
+		}
+	}
+
+	public Integer getIpv4PrefixCount() {
+		return this.ipv4PrefixCount;
+	}
+
+	public void setIpv4PrefixCount(Integer ipv4PrefixCount) {
+		this.ipv4PrefixCount = ipv4PrefixCount;
+		if(ipv4PrefixCount != null){
+			putQueryParameter("Ipv4PrefixCount", ipv4PrefixCount.toString());
 		}
 	}
 

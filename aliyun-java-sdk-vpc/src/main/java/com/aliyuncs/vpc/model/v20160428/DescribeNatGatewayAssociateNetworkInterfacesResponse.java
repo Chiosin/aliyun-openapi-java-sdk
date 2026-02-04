@@ -107,6 +107,8 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponse extends AcsRes
 
 		private String tunnelIndex;
 
+		private String resourceVpcId;
+
 		private List<IPv4Set> iPv4Sets;
 
 		public String getNetworkInterfaceId() {
@@ -147,6 +149,14 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponse extends AcsRes
 
 		public void setTunnelIndex(String tunnelIndex) {
 			this.tunnelIndex = tunnelIndex;
+		}
+
+		public String getResourceVpcId() {
+			return this.resourceVpcId;
+		}
+
+		public void setResourceVpcId(String resourceVpcId) {
+			this.resourceVpcId = resourceVpcId;
 		}
 
 		public List<IPv4Set> getIPv4Sets() {

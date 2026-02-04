@@ -14,16 +14,16 @@
 
 package com.aliyuncs.vpc.transform.v20160428;
 
-import com.aliyuncs.vpc.model.v20160428.DisableNatGatewayEcsMetricResponse;
+import com.aliyuncs.vpc.model.v20160428.DeleteExpressConnectResponse;
 import com.aliyuncs.transform.UnmarshallerContext;
 
 
-public class DisableNatGatewayEcsMetricResponseUnmarshaller {
+public class DeleteExpressConnectResponseUnmarshaller {
 
-	public static DisableNatGatewayEcsMetricResponse unmarshall(DisableNatGatewayEcsMetricResponse disableNatGatewayEcsMetricResponse, UnmarshallerContext _ctx) {
+	public static DeleteExpressConnectResponse unmarshall(DeleteExpressConnectResponse deleteExpressConnectResponse, UnmarshallerContext _ctx) {
 		
-		disableNatGatewayEcsMetricResponse.setRequestId(_ctx.stringValue("DisableNatGatewayEcsMetricResponse.RequestId"));
+		deleteExpressConnectResponse.setRequestId(_ctx.stringValue("DeleteExpressConnectResponse.RequestId"));
 	 
-	 	return disableNatGatewayEcsMetricResponse;
+	 	return deleteExpressConnectResponse;
 	}
 }

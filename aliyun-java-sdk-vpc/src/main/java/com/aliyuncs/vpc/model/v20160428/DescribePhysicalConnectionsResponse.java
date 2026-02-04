@@ -151,6 +151,8 @@ public class DescribePhysicalConnectionsResponse extends AcsResponse {
 
 		private String qosId;
 
+		private String opticalModuleModel;
+
 		private List<TagsItem> tags;
 
 		public String getType() {
@@ -447,6 +449,14 @@ public class DescribePhysicalConnectionsResponse extends AcsResponse {
 
 		public void setQosId(String qosId) {
 			this.qosId = qosId;
+		}
+
+		public String getOpticalModuleModel() {
+			return this.opticalModuleModel;
+		}
+
+		public void setOpticalModuleModel(String opticalModuleModel) {
+			this.opticalModuleModel = opticalModuleModel;
 		}
 
 		public List<TagsItem> getTags() {

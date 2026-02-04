@@ -15,14 +15,14 @@
 package com.aliyuncs.vpc.model.v20160428;
 
 import com.aliyuncs.AcsResponse;
-import com.aliyuncs.vpc.transform.v20160428.EnableNatGatewayEcsMetricResponseUnmarshaller;
+import com.aliyuncs.vpc.transform.v20160428.SwitchActiveRouteTargetResponseUnmarshaller;
 import com.aliyuncs.transform.UnmarshallerContext;
 
 /**
  * @author auto create
  * @version 
  */
-public class EnableNatGatewayEcsMetricResponse extends AcsResponse {
+public class SwitchActiveRouteTargetResponse extends AcsResponse {
 
 	private String requestId;
 
@@ -35,8 +35,8 @@ public class EnableNatGatewayEcsMetricResponse extends AcsResponse {
 	}
 
 	@Override
-	public EnableNatGatewayEcsMetricResponse getInstance(UnmarshallerContext context) {
-		return	EnableNatGatewayEcsMetricResponseUnmarshaller.unmarshall(this, context);
+	public SwitchActiveRouteTargetResponse getInstance(UnmarshallerContext context) {
+		return	SwitchActiveRouteTargetResponseUnmarshaller.unmarshall(this, context);
 	}
 
 	@Override

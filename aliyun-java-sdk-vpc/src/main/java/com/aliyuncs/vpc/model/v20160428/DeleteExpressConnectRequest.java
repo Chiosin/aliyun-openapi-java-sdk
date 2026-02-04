@@ -22,20 +22,24 @@ import com.aliyuncs.vpc.Endpoint;
  * @author auto create
  * @version 
  */
-public class ConvertBandwidthPackageRequest extends RpcAcsRequest<ConvertBandwidthPackageResponse> {
+public class DeleteExpressConnectRequest extends RpcAcsRequest<DeleteExpressConnectResponse> {
 	   
 
 	private Long resourceOwnerId;
 
 	private String clientToken;
 
-	private String bandwidthPackageId;
-
 	private String resourceOwnerAccount;
 
+	private String ownerAccount;
+
+	private String routerInterfaceId;
+
 	private Long ownerId;
-	public ConvertBandwidthPackageRequest() {
-		super("Vpc", "2016-04-28", "ConvertBandwidthPackage", "vpc");
+
+	private Boolean force;
+	public DeleteExpressConnectRequest() {
+		super("Vpc", "2016-04-28", "DeleteExpressConnect", "vpc");
 		setMethod(MethodType.POST);
 		try {
 			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
@@ -65,17 +69,6 @@ public class ConvertBandwidthPackageRequest extends RpcAcsRequest<ConvertBandwid
 		}
 	}
 
-	public String getBandwidthPackageId() {
-		return this.bandwidthPackageId;
-	}
-
-	public void setBandwidthPackageId(String bandwidthPackageId) {
-		this.bandwidthPackageId = bandwidthPackageId;
-		if(bandwidthPackageId != null){
-			putQueryParameter("BandwidthPackageId", bandwidthPackageId);
-		}
-	}
-
 	public String getResourceOwnerAccount() {
 		return this.resourceOwnerAccount;
 	}
@@ -84,6 +77,28 @@ public class ConvertBandwidthPackageRequest extends RpcAcsRequest<ConvertBandwid
 		this.resourceOwnerAccount = resourceOwnerAccount;
 		if(resourceOwnerAccount != null){
 			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+		}
+	}
+
+	public String getOwnerAccount() {
+		return this.ownerAccount;
+	}
+
+	public void setOwnerAccount(String ownerAccount) {
+		this.ownerAccount = ownerAccount;
+		if(ownerAccount != null){
+			putQueryParameter("OwnerAccount", ownerAccount);
+		}
+	}
+
+	public String getRouterInterfaceId() {
+		return this.routerInterfaceId;
+	}
+
+	public void setRouterInterfaceId(String routerInterfaceId) {
+		this.routerInterfaceId = routerInterfaceId;
+		if(routerInterfaceId != null){
+			putQueryParameter("RouterInterfaceId", routerInterfaceId);
 		}
 	}
 
@@ -98,9 +113,20 @@ public class ConvertBandwidthPackageRequest extends RpcAcsRequest<ConvertBandwid
 		}
 	}
 
+	public Boolean getForce() {
+		return this.force;
+	}
+
+	public void setForce(Boolean force) {
+		this.force = force;
+		if(force != null){
+			putQueryParameter("Force", force.toString());
+		}
+	}
+
 	@Override
-	public Class<ConvertBandwidthPackageResponse> getResponseClass() {
-		return ConvertBandwidthPackageResponse.class;
+	public Class<DeleteExpressConnectResponse> getResponseClass() {
+		return DeleteExpressConnectResponse.class;
 	}
 
 }

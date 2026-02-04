@@ -22,14 +22,12 @@ import com.aliyuncs.vpc.Endpoint;
  * @author auto create
  * @version 
  */
-public class DisableNatGatewayEcsMetricRequest extends RpcAcsRequest<DisableNatGatewayEcsMetricResponse> {
+public class ListBusinessRegionsRequest extends RpcAcsRequest<ListBusinessRegionsResponse> {
 	   
 
-	private Boolean dryRun;
-
-	private String natGatewayId;
-	public DisableNatGatewayEcsMetricRequest() {
-		super("Vpc", "2016-04-28", "DisableNatGatewayEcsMetric", "vpc");
+	private String acceptLanguage;
+	public ListBusinessRegionsRequest() {
+		super("Vpc", "2016-04-28", "ListBusinessRegions", "vpc");
 		setMethod(MethodType.POST);
 		try {
 			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
@@ -37,31 +35,20 @@ public class DisableNatGatewayEcsMetricRequest extends RpcAcsRequest<DisableNatG
 		} catch (Exception e) {}
 	}
 
-	public Boolean getDryRun() {
-		return this.dryRun;
+	public String getAcceptLanguage() {
+		return this.acceptLanguage;
 	}
 
-	public void setDryRun(Boolean dryRun) {
-		this.dryRun = dryRun;
-		if(dryRun != null){
-			putQueryParameter("DryRun", dryRun.toString());
-		}
-	}
-
-	public String getNatGatewayId() {
-		return this.natGatewayId;
-	}
-
-	public void setNatGatewayId(String natGatewayId) {
-		this.natGatewayId = natGatewayId;
-		if(natGatewayId != null){
-			putQueryParameter("NatGatewayId", natGatewayId);
+	public void setAcceptLanguage(String acceptLanguage) {
+		this.acceptLanguage = acceptLanguage;
+		if(acceptLanguage != null){
+			putQueryParameter("AcceptLanguage", acceptLanguage);
 		}
 	}
 
 	@Override
-	public Class<DisableNatGatewayEcsMetricResponse> getResponseClass() {
-		return DisableNatGatewayEcsMetricResponse.class;
+	public Class<ListBusinessRegionsResponse> getResponseClass() {
+		return ListBusinessRegionsResponse.class;
 	}
 
 }

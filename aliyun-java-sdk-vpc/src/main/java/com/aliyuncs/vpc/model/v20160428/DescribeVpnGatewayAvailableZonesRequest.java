@@ -29,6 +29,8 @@ public class DescribeVpnGatewayAvailableZonesRequest extends RpcAcsRequest<Descr
 
 	private String spec;
 
+	private String gatewayType;
+
 	private String resourceOwnerAccount;
 
 	private String ownerAccount;
@@ -64,6 +66,17 @@ public class DescribeVpnGatewayAvailableZonesRequest extends RpcAcsRequest<Descr
 		this.spec = spec;
 		if(spec != null){
 			putQueryParameter("Spec", spec);
+		}
+	}
+
+	public String getGatewayType() {
+		return this.gatewayType;
+	}
+
+	public void setGatewayType(String gatewayType) {
+		this.gatewayType = gatewayType;
+		if(gatewayType != null){
+			putQueryParameter("GatewayType", gatewayType);
 		}
 	}
 
