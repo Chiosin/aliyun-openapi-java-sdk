@@ -26,10 +26,6 @@ import com.aliyuncs.live.Endpoint;
 public class CreateLiveMessageAppRequest extends RpcAcsRequest<CreateLiveMessageAppResponse> {
 	   
 
-	private String dataCenter;
-
-	private Integer msgLifeCycle;
-
 	private String appName;
 
 	private Integer auditType;
@@ -37,6 +33,10 @@ public class CreateLiveMessageAppRequest extends RpcAcsRequest<CreateLiveMessage
 	private String auditUrl;
 
 	private String eventCallbackUrl;
+
+	private String dataCenter;
+
+	private Integer msgLifeCycle;
 	public CreateLiveMessageAppRequest() {
 		super("live", "2016-11-01", "CreateLiveMessageApp", "live");
 		setProtocol(ProtocolType.HTTPS);
@@ -45,28 +45,6 @@ public class CreateLiveMessageAppRequest extends RpcAcsRequest<CreateLiveMessage
 			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
 			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointRegional").set(this, Endpoint.endpointRegionalType);
 		} catch (Exception e) {}
-	}
-
-	public String getDataCenter() {
-		return this.dataCenter;
-	}
-
-	public void setDataCenter(String dataCenter) {
-		this.dataCenter = dataCenter;
-		if(dataCenter != null){
-			putQueryParameter("DataCenter", dataCenter);
-		}
-	}
-
-	public Integer getMsgLifeCycle() {
-		return this.msgLifeCycle;
-	}
-
-	public void setMsgLifeCycle(Integer msgLifeCycle) {
-		this.msgLifeCycle = msgLifeCycle;
-		if(msgLifeCycle != null){
-			putQueryParameter("MsgLifeCycle", msgLifeCycle.toString());
-		}
 	}
 
 	public String getAppName() {
@@ -110,6 +88,28 @@ public class CreateLiveMessageAppRequest extends RpcAcsRequest<CreateLiveMessage
 		this.eventCallbackUrl = eventCallbackUrl;
 		if(eventCallbackUrl != null){
 			putQueryParameter("EventCallbackUrl", eventCallbackUrl);
+		}
+	}
+
+	public String getDataCenter() {
+		return this.dataCenter;
+	}
+
+	public void setDataCenter(String dataCenter) {
+		this.dataCenter = dataCenter;
+		if(dataCenter != null){
+			putQueryParameter("DataCenter", dataCenter);
+		}
+	}
+
+	public Integer getMsgLifeCycle() {
+		return this.msgLifeCycle;
+	}
+
+	public void setMsgLifeCycle(Integer msgLifeCycle) {
+		this.msgLifeCycle = msgLifeCycle;
+		if(msgLifeCycle != null){
+			putQueryParameter("MsgLifeCycle", msgLifeCycle.toString());
 		}
 	}
 

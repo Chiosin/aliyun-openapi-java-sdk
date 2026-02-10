@@ -28,11 +28,15 @@ import com.aliyuncs.live.Endpoint;
 public class UpdateLiveMPUTaskRequest extends RpcAcsRequest<UpdateLiveMPUTaskResponse> {
 	   
 
-	@SerializedName("multiStreamURL")
-	private List<MultiStreamURL> multiStreamURL;
-
 	@SerializedName("singleSubParams")
 	private SingleSubParams singleSubParams;
+
+	private String taskId;
+
+	private String streamURL;
+
+	@SerializedName("multiStreamURL")
+	private List<MultiStreamURL> multiStreamURL;
 
 	@SerializedName("seiParams")
 	private SeiParams seiParams;
@@ -45,10 +49,6 @@ public class UpdateLiveMPUTaskRequest extends RpcAcsRequest<UpdateLiveMPUTaskRes
 	private String mixMode;
 
 	private String channelId;
-
-	private String taskId;
-
-	private String streamURL;
 	public UpdateLiveMPUTaskRequest() {
 		super("live", "2016-11-01", "UpdateLiveMPUTask", "live");
 		setMethod(MethodType.POST);
@@ -56,17 +56,6 @@ public class UpdateLiveMPUTaskRequest extends RpcAcsRequest<UpdateLiveMPUTaskRes
 			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
 			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointRegional").set(this, Endpoint.endpointRegionalType);
 		} catch (Exception e) {}
-	}
-
-	public List<MultiStreamURL> getMultiStreamURL() {
-		return this.multiStreamURL;
-	}
-
-	public void setMultiStreamURL(List<MultiStreamURL> multiStreamURL) {
-		this.multiStreamURL = multiStreamURL;	
-		if (multiStreamURL != null) {
-			putQueryParameter("MultiStreamURL" , new Gson().toJson(multiStreamURL));
-		}	
 	}
 
 	public SingleSubParams getSingleSubParams() {
@@ -77,6 +66,39 @@ public class UpdateLiveMPUTaskRequest extends RpcAcsRequest<UpdateLiveMPUTaskRes
 		this.singleSubParams = singleSubParams;	
 		if (singleSubParams != null) {
 			putQueryParameter("SingleSubParams" , new Gson().toJson(singleSubParams));
+		}	
+	}
+
+	public String getTaskId() {
+		return this.taskId;
+	}
+
+	public void setTaskId(String taskId) {
+		this.taskId = taskId;
+		if(taskId != null){
+			putQueryParameter("TaskId", taskId);
+		}
+	}
+
+	public String getStreamURL() {
+		return this.streamURL;
+	}
+
+	public void setStreamURL(String streamURL) {
+		this.streamURL = streamURL;
+		if(streamURL != null){
+			putQueryParameter("StreamURL", streamURL);
+		}
+	}
+
+	public List<MultiStreamURL> getMultiStreamURL() {
+		return this.multiStreamURL;
+	}
+
+	public void setMultiStreamURL(List<MultiStreamURL> multiStreamURL) {
+		this.multiStreamURL = multiStreamURL;	
+		if (multiStreamURL != null) {
+			putQueryParameter("MultiStreamURL" , new Gson().toJson(multiStreamURL));
 		}	
 	}
 
@@ -135,53 +157,6 @@ public class UpdateLiveMPUTaskRequest extends RpcAcsRequest<UpdateLiveMPUTaskRes
 		}
 	}
 
-	public String getTaskId() {
-		return this.taskId;
-	}
-
-	public void setTaskId(String taskId) {
-		this.taskId = taskId;
-		if(taskId != null){
-			putQueryParameter("TaskId", taskId);
-		}
-	}
-
-	public String getStreamURL() {
-		return this.streamURL;
-	}
-
-	public void setStreamURL(String streamURL) {
-		this.streamURL = streamURL;
-		if(streamURL != null){
-			putQueryParameter("StreamURL", streamURL);
-		}
-	}
-
-	public static class MultiStreamURL {
-
-		@SerializedName("IsAliCdn")
-		private Boolean isAliCdn;
-
-		@SerializedName("URL")
-		private String uRL;
-
-		public Boolean getIsAliCdn() {
-			return this.isAliCdn;
-		}
-
-		public void setIsAliCdn(Boolean isAliCdn) {
-			this.isAliCdn = isAliCdn;
-		}
-
-		public String getURL() {
-			return this.uRL;
-		}
-
-		public void setURL(String uRL) {
-			this.uRL = uRL;
-		}
-	}
-
 	public static class SingleSubParams {
 
 		@SerializedName("MixAudioUserIds")
@@ -226,6 +201,31 @@ public class UpdateLiveMPUTaskRequest extends RpcAcsRequest<UpdateLiveMPUTaskRes
 
 		public void setUserId(String userId) {
 			this.userId = userId;
+		}
+	}
+
+	public static class MultiStreamURL {
+
+		@SerializedName("IsAliCdn")
+		private Boolean isAliCdn;
+
+		@SerializedName("URL")
+		private String uRL;
+
+		public Boolean getIsAliCdn() {
+			return this.isAliCdn;
+		}
+
+		public void setIsAliCdn(Boolean isAliCdn) {
+			this.isAliCdn = isAliCdn;
+		}
+
+		public String getURL() {
+			return this.uRL;
+		}
+
+		public void setURL(String uRL) {
+			this.uRL = uRL;
 		}
 	}
 

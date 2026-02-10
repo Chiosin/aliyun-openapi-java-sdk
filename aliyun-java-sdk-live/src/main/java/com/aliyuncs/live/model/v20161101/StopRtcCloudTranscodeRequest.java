@@ -15,6 +15,7 @@
 package com.aliyuncs.live.model.v20161101;
 
 import com.aliyuncs.RpcAcsRequest;
+import com.aliyuncs.http.ProtocolType;
 import com.aliyuncs.http.MethodType;
 import com.aliyuncs.live.Endpoint;
 
@@ -22,16 +23,15 @@ import com.aliyuncs.live.Endpoint;
  * @author auto create
  * @version 
  */
-public class StopLiveDomainRequest extends RpcAcsRequest<StopLiveDomainResponse> {
+public class StopRtcCloudTranscodeRequest extends RpcAcsRequest<StopRtcCloudTranscodeResponse> {
 	   
 
-	private String securityToken;
+	private String appId;
 
-	private String domainName;
-
-	private Long ownerId;
-	public StopLiveDomainRequest() {
-		super("live", "2016-11-01", "StopLiveDomain", "live");
+	private String taskId;
+	public StopRtcCloudTranscodeRequest() {
+		super("live", "2016-11-01", "StopRtcCloudTranscode", "live");
+		setProtocol(ProtocolType.HTTPS);
 		setMethod(MethodType.POST);
 		try {
 			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
@@ -39,42 +39,31 @@ public class StopLiveDomainRequest extends RpcAcsRequest<StopLiveDomainResponse>
 		} catch (Exception e) {}
 	}
 
-	public String getSecurityToken() {
-		return this.securityToken;
+	public String getAppId() {
+		return this.appId;
 	}
 
-	public void setSecurityToken(String securityToken) {
-		this.securityToken = securityToken;
-		if(securityToken != null){
-			putQueryParameter("SecurityToken", securityToken);
+	public void setAppId(String appId) {
+		this.appId = appId;
+		if(appId != null){
+			putQueryParameter("AppId", appId);
 		}
 	}
 
-	public String getDomainName() {
-		return this.domainName;
+	public String getTaskId() {
+		return this.taskId;
 	}
 
-	public void setDomainName(String domainName) {
-		this.domainName = domainName;
-		if(domainName != null){
-			putQueryParameter("DomainName", domainName);
-		}
-	}
-
-	public Long getOwnerId() {
-		return this.ownerId;
-	}
-
-	public void setOwnerId(Long ownerId) {
-		this.ownerId = ownerId;
-		if(ownerId != null){
-			putQueryParameter("OwnerId", ownerId.toString());
+	public void setTaskId(String taskId) {
+		this.taskId = taskId;
+		if(taskId != null){
+			putQueryParameter("TaskId", taskId);
 		}
 	}
 
 	@Override
-	public Class<StopLiveDomainResponse> getResponseClass() {
-		return StopLiveDomainResponse.class;
+	public Class<StopRtcCloudTranscodeResponse> getResponseClass() {
+		return StopRtcCloudTranscodeResponse.class;
 	}
 
 }
