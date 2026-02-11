@@ -29,6 +29,8 @@ public class GetCapacityResponseUnmarshaller {
 		data.setUsedCapacity(_ctx.doubleValue("GetCapacityResponse.Data.UsedCapacity"));
 		data.setPreservedCapacity(_ctx.longValue("GetCapacityResponse.Data.PreservedCapacity"));
 		data.setExistLogStore(_ctx.booleanValue("GetCapacityResponse.Data.ExistLogStore"));
+		data.setAgentManagedAssetQuota(_ctx.longValue("GetCapacityResponse.Data.AgentManagedAssetQuota"));
+		data.setAgentManagedAssetUsed(_ctx.longValue("GetCapacityResponse.Data.AgentManagedAssetUsed"));
 		getCapacityResponse.setData(data);
 	 
 	 	return getCapacityResponse;

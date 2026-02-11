@@ -14,8 +14,12 @@
 
 package com.aliyuncs.cloud_siem.transform.v20220616;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.aliyuncs.cloud_siem.model.v20220616.DescribeEventCountByThreatLevelResponse;
 import com.aliyuncs.cloud_siem.model.v20220616.DescribeEventCountByThreatLevelResponse.Data;
+import com.aliyuncs.cloud_siem.model.v20220616.DescribeEventCountByThreatLevelResponse.Data.EventDailyNumItem;
 import com.aliyuncs.transform.UnmarshallerContext;
 
 
@@ -36,6 +40,17 @@ public class DescribeEventCountByThreatLevelResponseUnmarshaller {
 		data.setLowLevelEventNum(_ctx.longValue("DescribeEventCountByThreatLevelResponse.Data.LowLevelEventNum"));
 		data.setSeriousLevelEventNum(_ctx.longValue("DescribeEventCountByThreatLevelResponse.Data.SeriousLevelEventNum"));
 		data.setInfoLevelEventNum(_ctx.longValue("DescribeEventCountByThreatLevelResponse.Data.InfoLevelEventNum"));
+
+		List<EventDailyNumItem> eventDailyNum = new ArrayList<EventDailyNumItem>();
+		for (int i = 0; i < _ctx.lengthValue("DescribeEventCountByThreatLevelResponse.Data.EventDailyNum.Length"); i++) {
+			EventDailyNumItem eventDailyNumItem = new EventDailyNumItem();
+			eventDailyNumItem.setDate(_ctx.stringValue("DescribeEventCountByThreatLevelResponse.Data.EventDailyNum["+ i +"].Date"));
+			eventDailyNumItem.setEventNum(_ctx.longValue("DescribeEventCountByThreatLevelResponse.Data.EventDailyNum["+ i +"].EventNum"));
+			eventDailyNumItem.setUndealEventNum(_ctx.longValue("DescribeEventCountByThreatLevelResponse.Data.EventDailyNum["+ i +"].UndealEventNum"));
+
+			eventDailyNum.add(eventDailyNumItem);
+		}
+		data.setEventDailyNum(eventDailyNum);
 		describeEventCountByThreatLevelResponse.setData(data);
 	 
 	 	return describeEventCountByThreatLevelResponse;

@@ -52,6 +52,10 @@ public class GetCapacityResponse extends AcsResponse {
 
 		private Boolean existLogStore;
 
+		private Long agentManagedAssetQuota;
+
+		private Long agentManagedAssetUsed;
+
 		public Double getUsedCapacity() {
 			return this.usedCapacity;
 		}
@@ -74,6 +78,22 @@ public class GetCapacityResponse extends AcsResponse {
 
 		public void setExistLogStore(Boolean existLogStore) {
 			this.existLogStore = existLogStore;
+		}
+
+		public Long getAgentManagedAssetQuota() {
+			return this.agentManagedAssetQuota;
+		}
+
+		public void setAgentManagedAssetQuota(Long agentManagedAssetQuota) {
+			this.agentManagedAssetQuota = agentManagedAssetQuota;
+		}
+
+		public Long getAgentManagedAssetUsed() {
+			return this.agentManagedAssetUsed;
+		}
+
+		public void setAgentManagedAssetUsed(Long agentManagedAssetUsed) {
+			this.agentManagedAssetUsed = agentManagedAssetUsed;
 		}
 	}
 

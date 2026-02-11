@@ -137,6 +137,14 @@ public class ListEntitiesResponse extends AcsResponse {
 
 			private String tags;
 
+			private String agentDisposalMethod;
+
+			private String agentDisposalPlaybookUuid;
+
+			private String agentDisposalSuggestion;
+
+			private String agentConfidence;
+
 			public Long getId() {
 				return this.id;
 			}
@@ -287,6 +295,38 @@ public class ListEntitiesResponse extends AcsResponse {
 
 			public void setTags(String tags) {
 				this.tags = tags;
+			}
+
+			public String getAgentDisposalMethod() {
+				return this.agentDisposalMethod;
+			}
+
+			public void setAgentDisposalMethod(String agentDisposalMethod) {
+				this.agentDisposalMethod = agentDisposalMethod;
+			}
+
+			public String getAgentDisposalPlaybookUuid() {
+				return this.agentDisposalPlaybookUuid;
+			}
+
+			public void setAgentDisposalPlaybookUuid(String agentDisposalPlaybookUuid) {
+				this.agentDisposalPlaybookUuid = agentDisposalPlaybookUuid;
+			}
+
+			public String getAgentDisposalSuggestion() {
+				return this.agentDisposalSuggestion;
+			}
+
+			public void setAgentDisposalSuggestion(String agentDisposalSuggestion) {
+				this.agentDisposalSuggestion = agentDisposalSuggestion;
+			}
+
+			public String getAgentConfidence() {
+				return this.agentConfidence;
+			}
+
+			public void setAgentConfidence(String agentConfidence) {
+				this.agentConfidence = agentConfidence;
 			}
 		}
 

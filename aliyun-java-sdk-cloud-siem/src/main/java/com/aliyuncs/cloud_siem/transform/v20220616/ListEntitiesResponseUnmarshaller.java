@@ -63,6 +63,10 @@ public class ListEntitiesResponseUnmarshaller {
 			responseDataItem.setIsAsset(_ctx.stringValue("ListEntitiesResponse.Data.ResponseData["+ i +"].IsAsset"));
 			responseDataItem.setIsMalware(_ctx.stringValue("ListEntitiesResponse.Data.ResponseData["+ i +"].IsMalware"));
 			responseDataItem.setTags(_ctx.stringValue("ListEntitiesResponse.Data.ResponseData["+ i +"].Tags"));
+			responseDataItem.setAgentDisposalMethod(_ctx.stringValue("ListEntitiesResponse.Data.ResponseData["+ i +"].AgentDisposalMethod"));
+			responseDataItem.setAgentDisposalPlaybookUuid(_ctx.stringValue("ListEntitiesResponse.Data.ResponseData["+ i +"].AgentDisposalPlaybookUuid"));
+			responseDataItem.setAgentDisposalSuggestion(_ctx.stringValue("ListEntitiesResponse.Data.ResponseData["+ i +"].AgentDisposalSuggestion"));
+			responseDataItem.setAgentConfidence(_ctx.stringValue("ListEntitiesResponse.Data.ResponseData["+ i +"].AgentConfidence"));
 
 			responseData.add(responseDataItem);
 		}

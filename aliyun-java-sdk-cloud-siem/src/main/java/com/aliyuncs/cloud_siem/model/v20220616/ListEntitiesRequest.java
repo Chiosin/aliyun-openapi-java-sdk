@@ -31,6 +31,8 @@ public class ListEntitiesRequest extends RpcAcsRequest<ListEntitiesResponse> {
 
 	private String entityName;
 
+	private String entityUuids;
+
 	private Integer pageSize;
 
 	private Integer roleType;
@@ -82,6 +84,17 @@ public class ListEntitiesRequest extends RpcAcsRequest<ListEntitiesResponse> {
 		this.entityName = entityName;
 		if(entityName != null){
 			putBodyParameter("EntityName", entityName);
+		}
+	}
+
+	public String getEntityUuids() {
+		return this.entityUuids;
+	}
+
+	public void setEntityUuids(String entityUuids) {
+		this.entityUuids = entityUuids;
+		if(entityUuids != null){
+			putBodyParameter("EntityUuids", entityUuids);
 		}
 	}
 

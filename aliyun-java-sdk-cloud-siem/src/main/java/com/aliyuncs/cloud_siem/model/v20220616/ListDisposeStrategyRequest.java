@@ -55,6 +55,8 @@ public class ListDisposeStrategyRequest extends RpcAcsRequest<ListDisposeStrateg
 	private String entityType;
 
 	private String incidentUuid;
+
+	private Integer status;
 	public ListDisposeStrategyRequest() {
 		super("cloud-siem", "2022-06-16", "ListDisposeStrategy", "cloud-siem");
 		setMethod(MethodType.POST);
@@ -233,6 +235,17 @@ public class ListDisposeStrategyRequest extends RpcAcsRequest<ListDisposeStrateg
 		this.incidentUuid = incidentUuid;
 		if(incidentUuid != null){
 			putBodyParameter("IncidentUuid", incidentUuid);
+		}
+	}
+
+	public Integer getStatus() {
+		return this.status;
+	}
+
+	public void setStatus(Integer status) {
+		this.status = status;
+		if(status != null){
+			putBodyParameter("Status", status.toString());
 		}
 	}
 

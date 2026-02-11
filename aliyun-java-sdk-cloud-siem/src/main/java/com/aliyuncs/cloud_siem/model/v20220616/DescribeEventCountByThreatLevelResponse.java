@@ -14,6 +14,7 @@
 
 package com.aliyuncs.cloud_siem.model.v20220616;
 
+import java.util.List;
 import com.aliyuncs.AcsResponse;
 import com.aliyuncs.cloud_siem.transform.v20220616.DescribeEventCountByThreatLevelResponseUnmarshaller;
 import com.aliyuncs.transform.UnmarshallerContext;
@@ -90,6 +91,8 @@ public class DescribeEventCountByThreatLevelResponse extends AcsResponse {
 
 		private Long infoLevelEventNum;
 
+		private List<EventDailyNumItem> eventDailyNum;
+
 		public Long getEventNum() {
 			return this.eventNum;
 		}
@@ -144,6 +147,47 @@ public class DescribeEventCountByThreatLevelResponse extends AcsResponse {
 
 		public void setInfoLevelEventNum(Long infoLevelEventNum) {
 			this.infoLevelEventNum = infoLevelEventNum;
+		}
+
+		public List<EventDailyNumItem> getEventDailyNum() {
+			return this.eventDailyNum;
+		}
+
+		public void setEventDailyNum(List<EventDailyNumItem> eventDailyNum) {
+			this.eventDailyNum = eventDailyNum;
+		}
+
+		public static class EventDailyNumItem {
+
+			private String date;
+
+			private Long eventNum;
+
+			private Long undealEventNum;
+
+			public String getDate() {
+				return this.date;
+			}
+
+			public void setDate(String date) {
+				this.date = date;
+			}
+
+			public Long getEventNum() {
+				return this.eventNum;
+			}
+
+			public void setEventNum(Long eventNum) {
+				this.eventNum = eventNum;
+			}
+
+			public Long getUndealEventNum() {
+				return this.undealEventNum;
+			}
+
+			public void setUndealEventNum(Long undealEventNum) {
+				this.undealEventNum = undealEventNum;
+			}
 		}
 	}
 
