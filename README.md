@@ -4,21 +4,39 @@ English | [简体中文](./README-CN.md)
 <a href=" https://www.alibabacloud.com"><img src="https://aliyunsdk-pages.alicdn.com/icons/AlibabaCloud.svg"></a>
 </p>
 
-<h1 align="center">Alibaba Cloud SDK for Java</h1>
+<h1 align="center">Alibaba Cloud SDK for Java (V1.0)</h1>
 
 <p align="center">
 <a href="https://search.maven.org/search?q=g:%22com.aliyun%22%20AND%20a:%22aliyun-java-sdk-core%22"><img src="https://img.shields.io/maven-central/v/com.aliyun/aliyun-java-sdk-core.svg?label=Maven%20Central" alt="Latest Stable Version"/></a>
 <a href="https://travis-ci.org/aliyun/aliyun-openapi-java-sdk"><img src="https://travis-ci.org/aliyun/aliyun-openapi-java-sdk.svg?branch=master"/></a>
 <a href="https://codecov.io/gh/aliyun/aliyun-openapi-java-sdk"><img src="https://codecov.io/gh/aliyun/aliyun-openapi-java-sdk/branch/master/graph/badge.svg"/></a>
-<!-- <a href="https://www.codacy.com/app/aliyun/aliyun-openapi-java-sdk?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=aliyun/aliyun-openapi-java-sdk&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/aef3826e57ca444fb217bab8edaed195"/></a> -->
 <a href="https://ci.appveyor.com/project/aliyun/aliyun-openapi-java-sdk"><img src="https://ci.appveyor.com/api/projects/status/levg38kb55k0pn1v/branch/master?svg=true"/></a>
 </p>
 
-The Alibaba Cloud SDK for Java allows you to access Alibaba Cloud services such as Elastic Compute Service (ECS), Server Load Balancer (SLB), and CloudMonitor. You can access Alibaba Cloud services without the need to handle API related tasks, such as signing and constructing your requests.
+> ⚠️ **Important Notice**: Alibaba Cloud V1.0 Java SDK has entered End-of-Support (March 1, 2025) and is no longer recommended for use. New users should directly use the [V2.0 Java SDK](https://github.com/aliyun/alibabacloud-java-sdk); users who have already integrated the V1.0 Java SDK are also advised to migrate to the [V2.0 Java SDK](https://github.com/aliyun/alibabacloud-java-sdk). 
+>
+> V2.0 Java SDK usage please refer to [Help Center Documentation](https://help.aliyun.com/zh/sdk/developer-reference/v2-java-sdk) and [Alibaba Cloud OpenAPI Developer Portal](https://next.api.aliyun.com/).
 
-This document introduces how to obtain and call Alibaba Cloud SDK for Java.
+The Alibaba Cloud SDK for Java (V1.0) allows you to access Alibaba Cloud services such as Elastic Compute Service (ECS), Server Load Balancer (SLB), and CloudMonitor. You can access Alibaba Cloud services without the need to handle API related tasks, such as signing and constructing your requests.
 
-If you have any problem while using Alibaba Cloud SDK for Java, please [submit an issue](https://github.com/aliyun/aliyun-openapi-java-sdk/issues/new).
+This document introduces how to obtain and call Alibaba Cloud SDK for Java (V1.0).
+
+If you have any problem while using Alibaba Cloud SDK for Java (V1.0), please [submit an issue](https://github.com/aliyun/aliyun-openapi-java-sdk/issues/new).
+
+## ⚠️ Migration Notice
+
+**Alibaba Cloud V1.0 Java SDK is deprecated and will no longer receive updates after March 1, 2025.**
+
+### Why migrate to V2.0?
+- **Better Performance**: Improved architecture and optimized performance
+- **Enhanced Security**: Modern security practices and credential management
+- **Active Maintenance**: Ongoing updates and bug fixes
+- **Richer Features**: New capabilities and improved API design
+
+### Migration Resources
+- **V2.0 SDK Repository**: [https://github.com/aliyun/alibabacloud-java-sdk](https://github.com/aliyun/alibabacloud-java-sdk)
+- **V2.0 Documentation**: [https://help.aliyun.com/zh/sdk/developer-reference/v2-java-sdk](https://help.aliyun.com/zh/sdk/developer-reference/v2-java-sdk)
+- **V1/V2 SDK Differences**: [https://help.aliyun.com/zh/sdk/product-overview/differences-between-v1-and-v2-sdks](https://help.aliyun.com/zh/sdk/product-overview/differences-between-v1-and-v2-sdks)
 
 ## Requirements
 
@@ -73,7 +91,7 @@ If maven is not downloading jar packages from a central repository, you need to 
 
 ## Quick Examples
 
-The following code example shows the three main steps to use Alibaba Cloud SDK for Java :
+The following code example shows the three main steps to use Alibaba Cloud SDK for Java (V1.0):
 
 1. Create and initialize a `DefaultAcsClient` instance.
 
@@ -142,8 +160,10 @@ Please make sure to read the [Contributing Guide](CONTRIBUTING.md) before making
 
 ## References
 * [Alibaba Cloud Regions & Endpoints](https://developer.aliyun.com/endpoints)
-* [Alibab Cloud OpenAPI Portal](https://next.api.aliyun.com/)
+* [Alibaba Cloud OpenAPI Portal](https://next.api.aliyun.com/)
 * [Latest Release](https://github.com/aliyun/aliyun-openapi-java-sdk)
+* [V2.0 Java SDK Repository](https://github.com/aliyun/alibabacloud-java-sdk)
+* [V2.0 Java SDK Documentation](https://help.aliyun.com/zh/sdk/developer-reference/v2-java-sdk)
 
 ## License
 [Apache-2.0](http://www.apache.org/licenses/LICENSE-2.0)

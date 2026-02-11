@@ -4,19 +4,35 @@
 <a href=" https://www.alibabacloud.com"><img src="https://aliyunsdk-pages.alicdn.com/icons/Aliyun.svg"></a>
 </p>
 
-<h1 align="center">Alibaba Cloud SDK for Java</h1>
+<h1 align="center">Alibaba Cloud SDK for Java (V1.0)</h1>
 
 <p align="center">
 <a href="https://search.maven.org/search?q=g:%22com.aliyun%22%20AND%20a:%22aliyun-java-sdk-core%22"><img src="https://img.shields.io/maven-central/v/com.aliyun/aliyun-java-sdk-core.svg?label=Maven%20Central" alt="Latest Stable Version"/></a>
 <a href="https://travis-ci.org/aliyun/aliyun-openapi-java-sdk"><img src="https://travis-ci.org/aliyun/aliyun-openapi-java-sdk.svg?branch=master"/></a>
 <a href="https://codecov.io/gh/aliyun/aliyun-openapi-java-sdk"><img src="https://codecov.io/gh/aliyun/aliyun-openapi-java-sdk/branch/master/graph/badge.svg"/></a>
-<!-- <a href="https://www.codacy.com/app/aliyun/aliyun-openapi-java-sdk?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=aliyun/aliyun-openapi-java-sdk&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/aef3826e57ca444fb217bab8edaed195"/></a> -->
 <a href="https://ci.appveyor.com/project/aliyun/aliyun-openapi-java-sdk"><img src="https://ci.appveyor.com/api/projects/status/levg38kb55k0pn1v/branch/master?svg=true"/></a>
 </p>
 
-欢迎使用 Alibaba Cloud SDK for Java 。Alibaba Cloud SDK for Java 让您不用复杂编程即可访问云服务器、云监控等多个阿里云服务。
-这里向您介绍如何获取 Alibaba Cloud SDK for Java 并开始调用。
-如果您在使用 Alibaba Cloud SDK for Java 的过程中遇到任何问题，欢迎在当前 GitHub [提交 Issues](https://github.com/aliyun/aliyun-openapi-java-sdk/issues/new)。
+> ⚠️ **重要声明**：阿里云 V1.0 Java SDK 已进入终止支持状态（2025年3月1日），不再建议使用。新用户请直接使用 [V2.0 Java SDK](https://github.com/aliyun/alibabacloud-java-sdk)；已经集成 V1.0 Java SDK 的用户也建议迁移至 [V2.0 Java SDK](https://github.com/aliyun/alibabacloud-java-sdk)。V2.0 Java SDK 使用方式请参见[帮助中心文档](https://help.aliyun.com/zh/sdk/developer-reference/v2-java-sdk)以及[阿里云 OpenAPI 开发者门户](https://next.api.aliyun.com/)。
+
+欢迎使用 Alibaba Cloud SDK for Java (V1.0)。Alibaba Cloud SDK for Java 让您不用复杂编程即可访问云服务器、云监控等多个阿里云服务。
+这里向您介绍如何获取 Alibaba Cloud SDK for Java (V1.0) 并开始调用。
+如果您在使用 Alibaba Cloud SDK for Java (V1.0) 的过程中遇到任何问题，欢迎在当前 GitHub [提交 Issues](https://github.com/aliyun/aliyun-openapi-java-sdk/issues/new)。
+
+## ⚠️ 迁移声明
+
+**阿里云 V1.0 Java SDK 已弃用，2025年3月1日后将不再接收更新。**
+
+### 为什么要迁移到 V2.0？
+- **更好的性能**：改进的架构和优化的性能
+- **增强的安全性**：现代化的安全实践和凭证管理
+- **持续维护**：持续的更新和错误修复
+- **更丰富的功能**：新功能和改进的API设计
+
+### 迁移资源
+- **V2.0 SDK 仓库**：[https://github.com/aliyun/alibabacloud-java-sdk](https://github.com/aliyun/alibabacloud-java-sdk)
+- **V2.0 文档**：[https://help.aliyun.com/zh/sdk/developer-reference/v2-java-sdk](https://help.aliyun.com/zh/sdk/developer-reference/v2-java-sdk)
+- **V1/V2 SDK 差异对比**：[https://help.aliyun.com/zh/sdk/product-overview/differences-between-v1-and-v2-sdks](https://help.aliyun.com/zh/sdk/product-overview/differences-between-v1-and-v2-sdks)
 
 ## 环境要求
 1. 要使用 Alibaba Cloud SDK for Java ，您需要一个云账号以及一对`Access Key ID`和`Access Key Secret`。 请在阿里云控制台中的[AccessKey管理页面](https://usercenter.console.aliyun.com/?spm=5176.doc52740.2.3.QKZk8w#/manage/ak)上创建和查看您的Access Key，或者联系您的系统管理员。
@@ -65,7 +81,7 @@
 
 ## 快速使用
 
-以下这个代码示例向您展示了调用 Alibaba Cloud SDK for Java 的3个主要步骤：
+以下这个代码示例向您展示了调用 Alibaba Cloud SDK for Java (V1.0) 的3个主要步骤：
 1. 创建DefaultAcsClient实例并初始化。
 2. 创建API请求并设置参数。
 3. 发起请求并处理应答或异常。
@@ -132,6 +148,8 @@ public class Main {
 * [阿里云服务 Regions & Endpoints](https://developer.aliyun.com/endpoints)
 * [OpenAPI 开发者门户](https://next.api.aliyun.com/)
 * [最新源码](https://github.com/aliyun/aliyun-openapi-java-sdk)
+* [V2.0 Java SDK 仓库](https://github.com/aliyun/alibabacloud-java-sdk)
+* [V2.0 Java SDK 文档](https://help.aliyun.com/zh/sdk/developer-reference/v2-java-sdk)
 
 ## 许可证
 [Apache-2.0](http://www.apache.org/licenses/LICENSE-2.0)
